@@ -49,10 +49,11 @@ nav {
   padding-top: 1rem;
   padding-bottom: 0.3rem;
   background-color: #001858;
+  height: 3.2rem;
 }
 nav .gdsc_logo a img {
   height: 1.3rem;
-  margin-left: 6rem;
+  padding-left: 6rem;
   transition: 0.2s;
 }
 nav .gdsc_logo a img:hover {
@@ -172,17 +173,20 @@ nav ul a:hover {
 
 .who_wrap {
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   justify-content: center;
   align-items: center;
   gap: 2.5rem;
   padding: 1rem;
 }
-
+.who-leftside {
+  width: 50%;
+  padding: 2rem 0;
+}
 .who_wrap > .text,
-.who_wrap > img {
-  width: 18rem;
-  margin: 1rem;
+.who_wrap img {
+  width: 100%;
+  /* margin: 1rem; */
   font-size: 0.9rem;
 }
 
@@ -201,6 +205,9 @@ nav ul a:hover {
   padding: 2rem;
   border-radius: 10px;
 }
+.mission h2 {
+  font-size: 1.4rem;
+}
 .social_wrap {
   background-color: #001858;
 }
@@ -212,7 +219,10 @@ nav ul a:hover {
 .join {
   background-color: rgb(255, 127, 127);
 }
-
+.join a {
+  text-decoration: none;
+  color: inherit;
+}
 .social {
   justify-content: center;
 }
@@ -324,12 +334,12 @@ nav ul a:hover {
   padding: 0.3rem 0.8rem;
   cursor: pointer;
   transition: 0.3s;
+  background: pink;
+  box-shadow: 3px 4px 9px -3px #5a5858;
 }
 
 .btn:hover {
-  background: pink;
   transform: scale(1.1);
-  box-shadow: 3px 4px 9px -3px #5a5858;
 }
 
 .btn.submit {
@@ -381,17 +391,17 @@ nav ul a:hover {
   nav ul {
     display: none;
   }
-  .mission_wrap{
+  .mission_wrap {
     flex-wrap: wrap;
   }
-  .text{
+  .text {
     /* font-size: 1rem; */
   }
   .heading {
     font-size: 2rem;
   }
   nav .gdsc_logo a img {
-    margin-left: 2rem;
+    padding: 0 2rem;
   }
   .hero {
     padding: 0 4rem;
@@ -419,34 +429,61 @@ nav ul a:hover {
   .social_wrap,
   .contact_wrap,
   .join {
-    padding: 4rem 6rem;
+    padding: 4rem 1rem;
   }
-  
-  .text{
-    width: 22rem;
+  .who_wrap {
+    flex-direction: column;
+  }
+  .who-rightside{
+    width: 50%;
+  }
+  .who-rightside .text{
+    margin-bottom: 3rem;
+    width: auto;
   }
   .member {
     padding: 2rem;
     width: auto;
   }
-  .member .photo{
+  .member .photo {
     margin-bottom: 1rem;
     width: 10rem;
     height: 10rem;
   }
-  .social{
+  .social {
     width: 70%;
     margin: auto;
   }
 }
-@media (max-width:800px){
-*{
-  font-size: 15px;
+@media (max-width: 800px) {
+  * {
+    font-size: 15px;
+  }
+  .who-leftside,.who-rightside{
+    width: 100%;
+  }
 }
-}
-@media (max-width:450px){
+@media (max-width: 450px) {
   .hero .intro h1 {
     font-size: 1.2rem;
+  }
+}
+@media (max-width: 400px) {
+  .hero-wrap{
+    padding: 0;
+  }
+  .hero{
+    padding: 0 0 0 1rem;
+  }
+  .hero .image-box{
+    padding: 0;
+  }
+  .hero .intro h1 {
+    width: auto;
+  }
+  nav .gdsc_logo a img {
+    width: 100%;
+    height: auto;
   }
 }
 /* hide show start */

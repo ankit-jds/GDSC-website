@@ -32,7 +32,7 @@ const team = [
 
     ['https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2.0,f_auto,g_center,h_250,q_auto:good,w_250/v1/gcs/platform-data-dsc/avatars/pushkar_khadase_9rUJw7V.jpg', 'Pushkar Khadase', 'Cyber Security'],
     [
-        'https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2.0,f_auto,g_center,h_250,q_auto:good,w_250/v1/gcs/platform-data-dsc/avatars/amit_sharma17_LYFuGqD.jpg', 'Amit Sharma', 'Machine Learning and DevOps'
+        'https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2.0,f_auto,g_center,h_250,q_auto:good,w_250/v1/gcs/platform-data-dsc/avatars/amit_sharma_vpIsdXX.jpg', 'Amit Sharma', 'Machine Learning and DevOps'
     ],
     [
         'https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2.0,f_auto,g_center,h_250,q_auto:good,w_250/v1/gcs/platform-data-dsc/avatars/abhishek_sharma_3B9GgDN.jpg', 'Abhishek Sharma', 'Cloud Technology'
@@ -91,3 +91,27 @@ for (let index = 0; index < team.length; index++) {
 };
 
 document.getElementsByClassName('team')[0].innerHTML += html_to_be_added;
+
+function contact_form_submit(){
+    console.log("hello");
+    let contact_href="mailto:brilliankitamboli@gmail.com";
+    let subject="GDSC Contact Form"
+    let email=document.getElementById("email");
+    let name=document.getElementById("name");
+    let message=document.getElementById("message");
+    console.log(`${contact_href}?subject=${subject}&body=${message}`);
+    location.href=`${contact_href}?subject=${subject}&body=${message}`
+    let link="mailto:brilliankitamboli@gmail.com?subject=GDSC%20Contact%20Form&body=Name%3A%20Ankit%20Tamboli%0D%0AEmail%3A%20%22myemail%40gmail.com%22%0D%0AMessage%3A%20%22This%20is%20my%20message%20from%20me%20to%20you.%22"
+}
+
+
+var docWidth = document.documentElement.offsetWidth;
+
+[].forEach.call(
+  document.querySelectorAll('*'),
+  function(el) {
+    if (el.offsetWidth > docWidth) {
+      console.log(el);
+    }
+  }
+);
