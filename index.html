@@ -125,19 +125,19 @@
   <div class="contact_wrap" id="contact_wrap">
     <div class="heading">Contact Us</div>
     <div class="contact">
-      <form class="contact_form" action="mailto:brilliankitamboli@gmail.com" onsubmit="contact_form_submit()"
+      <form class="contact_form" action="https://formspree.io/f/mnqwzvwa" method="post" onsubmit="contact_form_submit()"
         name="EmailForm">
         <div class="form_group">
           <label for="name"> Name </label>
-          <input type="text" name="name" id="name" />
+          <input type="text" name="name" id="name" required />
         </div>
         <div class="form_group">
           <label for="email"> Email </label>
-          <input type="email" name="email" id="email" />
+          <input type="email" name="email" id="email" required/>
         </div>
         <label for="message"> Message </label>
         <div class="form_group">
-          <textarea type="text" id="message" name="message" rows="3"></textarea>
+          <textarea type="text" id="message" name="message" rows="3" required></textarea>
         </div>
         <input type="submit" class="btn submit" value="Submit" />
       </form>

@@ -98,7 +98,8 @@ function contact_form_submit(){
     let subject="GDSC Contact Form"
     let email=document.getElementById("email");
     let name=document.getElementById("name");
-    let message=document.getElementById("message");
+    let message=document.getElementById("message").value;
+    console.log(message);
     console.log(`${contact_href}?subject=${subject}&body=${message}`);
     location.href=`${contact_href}?subject=${subject}&body=${message}`
     let link="mailto:brilliankitamboli@gmail.com?subject=GDSC%20Contact%20Form&body=Name%3A%20Ankit%20Tamboli%0D%0AEmail%3A%20%22myemail%40gmail.com%22%0D%0AMessage%3A%20%22This%20is%20my%20message%20from%20me%20to%20you.%22"
