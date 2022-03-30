@@ -75,11 +75,7 @@ nav ul a {
 nav ul a:hover {
   transform: scale(1.1);
 }
-.hero .image-box {
-  /* border: 1px solid red ; */
-  /* padding: 2rem; */
-  /* margin-right: 50px; */
-}
+
 .hero_image {
   height: 60vh;
 }
@@ -393,9 +389,6 @@ nav ul a:hover {
   }
   .mission_wrap {
     flex-wrap: wrap;
-  }
-  .text {
-    /* font-size: 1rem; */
   }
   .heading {
     font-size: 2rem;
